@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+
+    "types": ["cypress"]
+  },
+  "include": [
+    "../node_modules/cypress",
+    "./**/*.ts"
+  ]
+}

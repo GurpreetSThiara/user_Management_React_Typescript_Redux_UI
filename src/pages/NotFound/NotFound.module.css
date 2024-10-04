@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .message {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .subMessage {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  .homeButton {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homeButton:hover {
+    background-color: #357ab7;
+  }
+  
+  .animation {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
