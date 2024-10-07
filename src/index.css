@@ -1,157 +1,81 @@
 /* Import Google Fonts */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
 /* Basic Reset */
+
+@layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+  
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+   
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+   
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+   
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+   
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+   
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+   
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+  
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+   
+      --radius: 0.5rem;
+    }
+   
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+   
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+   
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+   
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+   
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+   
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+   
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+   
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+   
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* Headings */
-h1 {
-    font-size: 5vw; /* 5% of viewport width */
-    font-weight: 600;
-    color: #2a9d8f;
-}
-
-h2 {
-    font-size: 4vw; /* 4% of viewport width */
-    font-weight: 500;
-    color: #264653;
-}
-
-h3 {
-    font-size: 3.5vw; /* 3.5% of viewport width */
-    font-weight: 500;
-    color: #e9c46a;
-}
-
-/* Subheadings */
-h4 {
-    font-size: 3vw; /* 3% of viewport width */
-    font-weight: 400;
-    color: #2a9d8f;
-}
-
-h5 {
-    font-size: 2.5vw; /* 2.5% of viewport width */
-    font-weight: 400;
-    color: #264653;
-}
-
-h6 {
-    font-size: 2vw; /* 2% of viewport width */
-    font-weight: 300;
-    color: #e9c46a;
-}
-
-/* Paragraphs */
-p {
-    font-size: 2.5vw; /* 2.5% of viewport width */
-    margin: 10px 0;
-    color: #555;
-}
-
-/* Links */
-a {
-    color: #2a9d8f;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Buttons */
-button {
-    background-color: #2a9d8f;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 2.5vw; /* 2.5% of viewport width */
-}
-
-button:hover {
-    background-color: #21867a;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    h1 {
-        font-size: 6vw; /* Adjusting for smaller screens */
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
-
-    p {
-        font-size: 3vw;
-    }
-}
-
-@media (max-width: 992px) {
-    h1 {
-        font-size: 7vw;
-    }
-
-    h2 {
-        font-size: 6vw;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 8vw;
-    }
-
-    h2 {
-        font-size: 7vw;
-    }
-
-    p {
-        font-size: 4vw;
-    }
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 10vw;
-    }
-
-    h2 {
-        font-size: 9vw;
-    }
-
-    button {
-        font-size: 4vw;
-        padding: 8px 12px;
-    }
-}
-
-
-/* Custom Classes */
-
-.center-row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.center-col{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
