@@ -4,6 +4,9 @@ import { createBrowserRouter, RouteObject } from 'react-router-dom';
 import App from '../App';
 import ProtectedRoutes from './ProtectedRoutes';
 import LayoutLoader from '../components/LayoutLoader/LayoutLoader';
+import UserProfilePage from '../pages/UserProfile/UserProfile';
+import Schemas from '../pages/schemas/Schemas';
+import AdminRecordsInterface from '../pages/Records/Records';
 
 
 
@@ -37,6 +40,30 @@ const routes: RouteObject[] = [
               </Suspense>
             ),
           },
+          {
+            path:'/user/:username',
+            element: (
+                          <Suspense fallback={<div>Loading...</div>}>
+                < UserProfilePage/>
+              </Suspense>
+            ),
+          },
+          {
+            path:'/admin/schema',
+            element: (
+                          <Suspense fallback={<div>Loading...</div>}>
+                < Schemas/>
+              </Suspense>
+            ),
+          },
+          {
+            path:'/admin/records',
+            element: (
+                          <Suspense fallback={<div>Loading...</div>}>
+                < AdminRecordsInterface/>
+              </Suspense>
+            ),
+          }
         //   {
         //     path: 'dashboard',
         //     element: (

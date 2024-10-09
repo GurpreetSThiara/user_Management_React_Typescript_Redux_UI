@@ -9,10 +9,19 @@ const authSlice = apiSlice.injectEndpoints({
                 method:'post'
                
             })
+        }),
+        verifyAccessToken: builder.mutation({
+            query:()=>({
+                url:'/auth/token',
+                
+                method:'post',
+
+               
+            })
         })
     })
 })
 
-export const {useLoginMutation} = authSlice;
+export const {useLoginMutation , useVerifyAccessTokenMutation} = authSlice;
 
 export default authSlice

@@ -16,6 +16,7 @@ const useLogin = () => {
             console.log(userData)
             const user: UserProfile = userData.data.user;
             dispatch(setUser(user));
+            console.log(user)
             navigate('/')
             return userData;
         } catch (error) {
