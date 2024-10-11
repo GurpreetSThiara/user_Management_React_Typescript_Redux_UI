@@ -31,7 +31,7 @@ const adminModelSlice = apiSlice.injectEndpoints({
         }),
     
         // POST /models/:modelName/fields
-        addField: builder.mutation<void, { modelName: string; field: { name: string; type: string } }>({
+        addField: builder.mutation<void, { modelName: string; field: any}>({
           query: ({ modelName, field }) => ({
             url: `/models/${encodeURIComponent(modelName)}/fields`,
             method: 'POST',
